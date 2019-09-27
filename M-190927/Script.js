@@ -95,27 +95,57 @@ document.write("TBA.")
 ////////////////////////////////////////////////////////////////////////
 //CHALLENGE 3 /////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+let zombieLand = {
+    name: "zombieLand",
+    type: 'horror',
+    keywords: '"zombies", "dead", "horror"',
+    topic: 'Zombieland ist eine ...'
+}
+
+let starWars = {
+    name: "starWars",
+    type: "sciFi",
+    keywords: "'science','fiction','starWars'",
+    topic: "StarWars takes place in a universe far far away...",
+}
+
+let oldSchool = {
+    name: "oldSchool",
+    type: 'comedy',
+    keywords: "'oldschool', 'willferrell', 'college'",
+    topic: 'In Oldschool three highschool friends go back to college to ...',
+}
+
+let paragraph1 = {
+    title: zombieLand,
+    text: "Zombieland ist eine US-amerikanische Filmkomödie aus dem Jahr 2009. Regie führte Ruben Fleischer; Rhett Reese und Paul Wernick schrieben das Drehbuch. In den Hauptrollen spielen Woody Harrelson, Jesse Eisenberg, Emma Stone und Abigail Breslin Überlebende einer Zombie-Apokalypse."
+}
+let paragraph2 = {
+    title: starWars,
+    text: "Star Wars ist ein Film-Franchise, dessen Geschichte mit dem 1977 erschienenen Kinofilm Krieg der Sterne begann. Schöpfer von Star Wars ist der Drehbuchautor, Produzent und Regisseur George Lucas",
+}
+let paragraph3 = {
+    title: oldSchool,
+    text: "Old School – Wir lassen absolut nichts anbrennen (Originaltitel: Old School) ist eine von DreamWorks im Jahre 2003 herausgebrachte Filmkomödie, die als Ursprung für die Bezeichnung Frat-Pack-Film gilt. Im Mittelpunkt stehen drei Mittdreißiger in der Midlife Crisis, die ihre Collegezeit wiederaufleben lassen wollen, indem sie eine Studentenverbindung gründen. Der Film mit Luke Wilson (Mitch), Vince Vaughn (Bernard) und Will Ferrell (Frank) wurde unter der Regie von Todd Phillips gedreht und von Phillips und Scot Armstrong geschrieben."
+}
+
+let arrOfTitles = [zombieLand, starWars, oldSchool];
+let arrOfParagraphs = [paragraph1, paragraph2, paragraph3];
 
 
 
+function storyBuilder(arr1, arr2, str) {
+    for (i = 0; i < arr1.length; i++) {
+        if (str == arr1[i].type) {
+            for (j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j].title) {
+                    return `The title "${arr1[i].name}" is perfect for you. Here you'll find a short intro: ${arr2[j].text}`
+                }
+            }
+        }
+    }
+
+}
 
 document.write("<br><br>/////////////////////////////////CHALLENGE 3 /////////////////////////////////<br>");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.write(storyBuilder(arrOfTitles, arrOfParagraphs, "sciFi"))
