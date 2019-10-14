@@ -124,6 +124,16 @@ document.write(checkLength(bdayName,guestName)+ `<br>`+ `<br>`)
 
 
 
+////////////////////////////////////////////////////////////////////////
+// freeCodeCamp Challenge/////////////////////////////////
+/////////////////////////////////////////777///////seven///////////7////
+// Example
+var ourStr = "I come first. " + "I come second.";
+
+// Only change code below this line
+
+var myStr = "This is the start. " + "This is the end.";
+
 
 
 
