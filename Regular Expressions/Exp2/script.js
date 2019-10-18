@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////
+// REG EXP 2
+///////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+document.write("REGULAR EXPRESSIONS 2<br><br> ")
+
+////////////////////////////////////////////////////////////////////////
+///////////////////////////////////
+/////////////////////////////////////////777///////seven///////////7////
+
+let re;
+// Literal Characters
+re = /hello/i;
+
+// Metacharacter Symbols
+re = /^h/i; // Must start with!
+re = /d'$/i; // Must end with!
+re = /^d$/ 
+re = /gre?a?\?y/i;
+re = /[A-Za-zäöü]rey/;
+
+// String to match
+const str = "Örey";
+
+//Log Results
+const result = re.exec(str);
+console.log(result)
+
+function reTest(re, str) {
+    if (re.test(str)) {
+        console.log(`${str} matches ${re.source}`);
+    } else {
+        console.log(`${str} does NOT match ${re.source}`);
+    }
+}
+
+reTest(re,str)
+
+
+///////////////////////////////////////////////////
+//// LUNCH BREAK FUNCTION
+// function lunchBreak(){
+//     console.log("now")
+// }
+
+// lunchBreak();
+
+
+
+
+
+
+
