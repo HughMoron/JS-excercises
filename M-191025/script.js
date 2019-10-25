@@ -49,16 +49,17 @@ let MORSE_CODE = {
     "--...": "7",
     "---..": "8",
     "----.": "9",
+    "   ": " ",
 };
 
-let str = '···−−−···'
+let str = '..   .- .-.. -- --- ... -   -.. .. -..   .. -'
 
 function chckMorseCode(str, code) {
     if (str==="···−−−···"){
         return "!!!SOS!!!"
     }
     else{
-    let re1 = /[.,-]+/ig;
+    let re1 = /[.,-]+|\s{3}/ig;
     let strArr1 = [];
     let translation = "";
     strArr1 = str.match(re1);
