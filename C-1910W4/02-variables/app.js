@@ -9,7 +9,7 @@ document.write(greeting("Hi", "Saf1") + "<br></br>")
 
 // Find the rabbit
 function findTheRabbit(text, phrase) {
-    return text.match(phrase).length 
+    return text.match(phrase).length
 }
 
 let text2 = "The rabbit was rabbit jumping all the time"
