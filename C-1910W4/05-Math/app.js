@@ -29,18 +29,30 @@ val = Math.random();
 val = Math.floor(Math.random() * 20 + 1)
 console.log(val);*/
 
-let luckyNumber = Math.floor(Math.random() * 100 + 1)
-function lottery(num) {
+
+//////////////////////////////////////////////////////////////////////
+//LOTTERY FUNCTION
+//////////////////////////////////////////////////////////////////////
+/*function lottery(num) {
+    
+    let luckyNumber = Math.floor(Math.random() * 100 + 1)
     console.log(` The lucky number is ${luckyNumber}`)
+    let diff = Math.abs(luckyNumber - num)
+
     if (num === luckyNumber) {
-        return `${num} is a lucky number. You win 100$!`
-    } else if (Math.abs(luckyNumber - num) <= 10) {
-        let val = Math.abs(luckyNumber - num)
-        return `Almost! You still win ${100-val*10}$`
+        return 100
+    } else if (diff <= 10) {
+        return 100-diff*10
     } else {
         return "Sorry! please try again."
     }
 
 }
 
-document.write(lottery(8))
+let winnings = 0;
+
+for (i=0; i<10; i++){
+winnings += lottery(48)
+document.write(winnings + "<br>")
+}
+*/
