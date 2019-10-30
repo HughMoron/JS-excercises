@@ -1,26 +1,38 @@
-let rslts = [78, 82, 45, 69, 23, 91, 55, 39, 66, 60];
-let basis = 50;
+let preRequisites = ["PHP", "JavaScript", "Ruby", "Python", "Java"];
+let Candidates = [{
+        Name: "Ali",
+        Skills: ["CSS", "Ruby", "Python", "Java"]
+    }, {
+        Name: "Bli",
+        Skills: ["PHP", "JavaScript"]
+    }, {
+        Name: "Cli",
+        Skills: ["JavaScript", "Ruby", "Python", "Java"]
+    },
+    {
+        Name: "Dli",
+        Skills: ["JavaScript", "Ruby", "Java"]
+    }
+];
+let hired = [];
 
-function passed(arr, basis) {
-    let notpassed = []
-    for (i = 0; i < arr.length; i++) {
-        if (arr[i] < basis) {
-            notpassed.push(arr[i])
+function hireOrNot(candidates, requisites) {
+    for (i = 0; i < candidates.length; i++) {
+        for (j = 0; j < candidates[i].Skills.length; j++) {
+            
+            for (k = 0; k < requisites.length; k++) {
+                let requiredSkills = 0;
+                if (requisites[k].includes(candidates[i].Skills[j])) {
+                    requiredSkills++
+                }
+                if (requiredSkills >= 3) {
+                    hired.push(candidates[i].Name)
+                }
+            }
         }
     }
-    return `${(notpassed.length)/(arr.length)*100}% have not passed the test.`
+    return `The hired people are ${hired}.`
 }
-document.write(passed(rslts, basis));
-
-
-////////////////////////////////////
-function over50 (arr){
-return arr.find(function(item) {
-    return item.age > 50;
-})
-};
-
-let ppl = [{name: "Jay", age: 24},{name: "Kay", age: 34},{name: "Ray", age: 44},{name: "Lay", age: 54}];
-
-document.write(over50(ppl))
-console.log(over50(ppl))
+//console.log(preRequisites.includes(Candidates.Skills[1]))
+console.log(hireOrNot(Candidates, preRequisites))
+document.write(hireOrNot(Candidates, preRequisites))
