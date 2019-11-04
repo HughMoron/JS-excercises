@@ -12,7 +12,7 @@ document.write("Good Morning")
 
 let route1 = {
     km: 16,
-    time: 40,
+    time: 400,
     stops: 12
 }
 
@@ -24,7 +24,7 @@ let route2 = {
 
 let route3 = {
     km: 88,
-    time: 40,
+    time: 140,
     stops: 4
 }
 
@@ -40,19 +40,16 @@ let temp=arr[0];
                 temp = arr[i];
             } else if (arr[i].stops == temp.stops) {
                 if (arr[i].km < temp.km) {
-                    temp = arr[i];
+                  temp = arr[i];
                 }
             }
         }
     }
-    return temp
+   return temp
 }
 
 console.log(findWay(routes))
 
-function findWayArr (arr1){
-    arr1.sort(function())
-}
 
 
 
