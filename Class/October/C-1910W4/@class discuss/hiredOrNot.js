@@ -5,7 +5,7 @@ function hireOrNot(candidates, requisites) {
         for (j = 0; j < candidates[i].Skills.length; j++) {
             for (k = 0; k < requisites.length; k++) {
                 if (candidates[i].Skills[j] == requisites[k]) {
-                    requiredSkills= requiredSkills+1
+                    requiredSkills++
                 }
             }
         }
@@ -14,7 +14,7 @@ function hireOrNot(candidates, requisites) {
         }
     }
     return `${hired} are hired.`
-}
+};
 
 let preRequisites = ["PHP", "JavaScript", "Ruby", "Python", "Java"];
 let Candidates = [{
