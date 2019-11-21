@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container fontPrimary">
+        <h3>Task List</h3>
+        <!-- New Task Input Field -->
+        <form>
+            <div class="form-group">
+              <label for="InputTask" class="text-secondary">New Task</label>
+              <input type="text" class="form-control border-0 p-0 mt-0 text-dark" id="InputTask" aria-describedby="emailHelp" placeholder="Walk the dog">
+           <hr class="my-0 bg-dark">
+              <button type="submit" class="mt-4 btn btn-info shadow-sm px-4">ADD TASK</button>
+          </form>
+          <hr class="fluid">
+          <h3>Tasks</h3>
+          <ul class="list-group">
+            <li class="list-group-item">List Item <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" class="orange">&times;</span>
+              </button></li>
+              <li class="list-group-item">List Item <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" class="orange">&times;</span>
+              </button></li>
+              <li class="list-group-item">List Item <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" class="orange">&times;</span>
+              </button></li>
+              <li class="list-group-item">List Item <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" class="orange">&times;</span>
+              </button></li>
+              <li class="list-group-item">List Item <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" class="orange">&times;</span>
+              </button></li>
+            </ul>
+
+          <button type="submit" class="mt-4 btn btn-dark shadow-sm px-4">CLEAR TASKS</button>
+
+    </div>
+
+</body>
+</html>
