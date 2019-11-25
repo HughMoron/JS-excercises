@@ -16,7 +16,10 @@ document.body.appendChild(div);
 div.appendChild(h2);
 div.appendChild(ul);
 
-
 lis.forEach(function(item){
     document.querySelector('ul').appendChild(document.createElement(`li`)).innerHTML =`<a href="#">${item}</a>`;
 });
+
+document.querySelector("div").style.width = "200px";
+document.querySelector("h2").style.font = "400 40px/1.5 Helvetica, Verdana, sans-serif";
+document.querySelector("h2").style.marging = "0";
