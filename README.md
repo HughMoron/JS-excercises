@@ -1,2 +1,2 @@
 # JS-excercises
-specially made for Saf1.
+*Especially* made for the **Sa-Force-1**.
