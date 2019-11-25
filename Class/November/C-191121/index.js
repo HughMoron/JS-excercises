@@ -87,8 +87,5 @@ item.style.paddingTop = "25px";
 item.style.textAlign = "center";
 })
 
-
-
-
 console.log()
  
