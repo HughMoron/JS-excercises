@@ -32,10 +32,34 @@ function onClick(s){
 }
 */
 
+////////////////////////////////////////////
+/// Button Challenge
+////////////////////////////////////////////
 
+let button = document.createElement("button");
+let h4 = document.createElement("h4");
+let div = document.createElement("div");
+button.setAttribute('type',"button");
+button.setAttribute('class','btn btn-outline-secondary');
+button.style.color = "white";
+button.innerText = "Click me";
+button.classList.add("btn-outline-primary");
 
+document.body.appendChild(div);
+document.querySelector("div").appendChild(button);
+document.querySelector("div").appendChild(h4);
 
+div.style.alignItems = "center";
 
+// ADDED EVENT
+document.querySelector('button').addEventListener('click', onClick);
+
+function onClick (s) {
+    h4.innerText = "Test worked!";
+    h4.style.fontFamily = "helvetica";
+    s.preventDefault();
+    button.style.backgroundColor = "orange";
+}
 
 
 
