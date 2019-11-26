@@ -69,15 +69,12 @@ function onClick (s) {
 let elementsArray = document.querySelectorAll("i");
 
 elementsArray.forEach(function(item) {
-    item.addEventListener("click", function() {
+    item.addEventListener("click", (s) => {
         item.parentElement.parentElement.remove();
+        s.preventDefault();
     }
        );
 });
-
-// function eraseLi(){
-//     item.parentElement.remove();  
-//   } 
 
 
 
