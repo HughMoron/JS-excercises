@@ -21,7 +21,7 @@ Array.from(link).forEach(function (item) {
 ////////////////////////////////////////////
 /// On-Click Challenge
 ////////////////////////////////////////////
-
+/*
 document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
 function onClick(s){
@@ -30,7 +30,7 @@ function onClick(s){
    s.target.style.backgroundColor = "red";
     s.preventDefault();
 }
-  
+*/
 
 
 
