@@ -35,7 +35,7 @@ function onClick(s){
 ////////////////////////////////////////////
 /// Button Challenge
 ////////////////////////////////////////////
-
+/*
 let button = document.createElement("button");
 let h4 = document.createElement("h4");
 let div = document.createElement("div");
@@ -60,10 +60,24 @@ function onClick (s) {
     s.preventDefault();
     button.style.backgroundColor = "orange";
 }
+*/
 
+////////////////////////////////////////////
+/// REMOVE Challenge
+////////////////////////////////////////////
 
+let elementsArray = document.querySelectorAll("i");
 
+elementsArray.forEach(function(item) {
+    item.addEventListener("click", function() {
+        item.parentElement.parentElement.remove();
+    }
+       );
+});
 
+// function eraseLi(){
+//     item.parentElement.remove();  
+//   } 
 
 
 
