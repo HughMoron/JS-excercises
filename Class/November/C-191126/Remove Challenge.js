@@ -50,27 +50,26 @@ document.querySelector("div").appendChild(button);
 document.querySelector("div").appendChild(h4);
 
 div.style.alignItems = "center";
-
+*/
 // ADDED EVENT
 document.querySelector('button').addEventListener('click', onClick);
 
-function onClick (s) {
+function onClick (x) {
     h4.innerText = "Test worked!";
     h4.style.fontFamily = "helvetica";
-    s.preventDefault();
+    x.preventDefault();
     button.style.backgroundColor = "orange";
 }
-*/
 
 ////////////////////////////////////////////
 /// REMOVE Challenge
 ////////////////////////////////////////////
 
-let elementsArray = document.querySelectorAll("i");
+let elementsArray = document.querySelectorAll("a");
 
 elementsArray.forEach(function(item) {
     item.addEventListener("click", (s) => {
-        item.parentElement.parentElement.remove();
+        item.parentElement.remove();
         s.preventDefault();
     }
        );
