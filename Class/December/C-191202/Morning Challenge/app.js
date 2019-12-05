@@ -81,12 +81,14 @@ for (i=0; i<3; i++){
     thJS1[i].style.color = "white";
     thJS1[i].style.padding = "0.5rem";
     thJS1[i].style.border = "2px solid black";
+
     tdJS1[i] = document.createElement ("td");
     tdJS1[i].id = `TR1-${i}`;
     tdJS1[i].innerText = `TR1-${i}`;
     tdJS1[i].style.background = "grey";
     tdJS1[i].style.color = "white";
     tdJS1[i].style.padding = "0.3rem";
+
     tdJS2[i] = document.createElement ("td");
     tdJS2[i].id = `TR2-${i}`;
     tdJS2[i].innerText = `TR2-${i}`;
