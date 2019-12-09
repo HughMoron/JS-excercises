@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keydown and Up</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="prevent">
+        Prevent default for: <input type="checkbox" name="keydown" id="keydown">
+        <label for="keydown">keydown</label> <input type="checkbox" name="keyup" id="keyup">
+        <label for="keyup">keyup</label>
+    </div>
+    <div class="ignore">
+        Ignore: <input type="checkbox" name="keydown2" id="keydown2">
+        <label for="keydown2">keydown</label> <input type="checkbox" name="keyup2" id="keyup2">
+        <label for="keyup2">keyup</label>
+    </div>
+    <div class="focus">
+    Focus on the input field and press a key.
+    </div>
+    <div class="testarea">
+        <input type="text" name="textinput" id="textinput" value="Press keys here">
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit" id="clear">Clear</button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
