@@ -4,14 +4,14 @@
 
 let bulp = document.getElementById("bulp");
 
-bulp.addEventListener("mousedown", lightsOn);
-bulp.addEventListener("mouseup", lightsOn);
+bulp.addEventListener("mouseover", lightsOn);
+bulp.addEventListener("mouseout", lightsOn);
 
 function lightsOn(e) {
     console.log(e.type)
-    if (e.type == "mousedown") {
-        bulp.src = "bulbon.gif"
+    if (e.type == "mouseover") {
+        e.target.src = "bulbon.gif"
     } else {
-        bulp.src = "bulboff.gif";
+        e.target.src = "bulboff.gif";
     }
 }
