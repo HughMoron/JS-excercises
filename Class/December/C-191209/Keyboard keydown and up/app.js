@@ -4,9 +4,9 @@ let textarea = document.querySelector("textarea");
 let button = document.querySelector("#clear");
 let keydownPrevent = document.querySelector("#keydown")
 let keydownIgnore = document.querySelector("#keydown2")
-//console.log(keydownIgnore)
+let keyupIgnore = document.querySelector("#keyup2")
 
-//FUNCTIONS
+//ONE-LINE-FUNCTIONS
 input.onkeydown = displayInfo;
 input.onkeyup = displayInfo;
 input.onclick = (e) => {
@@ -22,18 +22,16 @@ button.onclick = () => {
     input.focus();
 };
 
-
+//EVENTHANDLER FUNCTION
 function displayInfo(e) {
+    if (keydownIgnore.checked || keyupIgnore.checked) return
     if (keydownPrevent.checked) {
         e.preventDefault()
     }
     if (e.type == "keydown") {
         if (e.key !== "Shift" || "Control" || "Alt") {
             textarea.value += `${e.type} key=${e.key} code=${e.code} \n`
-        }
-        else if (keydownIgnore.checked){
-            textarea.preventDefault();
-        }        
+        }      
         else {
             textarea.value += `${e.type} key=${e.key} code=${e.code} ${e.key}key\n`
         } 
