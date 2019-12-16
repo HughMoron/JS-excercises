@@ -1,0 +1,3 @@
+pre:focus {
+    outline: 1px dashed black;
+}
