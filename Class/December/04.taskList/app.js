@@ -18,6 +18,9 @@ function loadEventListeners() {
     taskList.addEventListener("click", removeTask)
     //CLEAR TASKS EVENT
     clearBtn.addEventListener("click", removeTask)
+    // FILTER THE TASK
+    filter.addEventListener("keyup",filterTasks)
+
 }
 
 //ADD TASK EVENT HANDLER
@@ -53,15 +56,26 @@ function addTask(e) {
     }
 }
 
-
 //REMOVE TASK EVENT
 function removeTask(e) {
     if (e.target.closest("li")) {
-        e.target.closest("li").remove()
+        if(confirm("Are you sure?")){
+        e.target.closest("li").remove()}
     }
     if (e.target === clearBtn) {
+        if (confirm("Are you sure?")){
         Array.from(document.querySelectorAll("li")).forEach(element => {
             element.remove();
-        });
+        });   
+        }
     }
+}
+
+//FILTER THE TASK
+function filterTasks(e){
+    Array.from(document.querySelectorAll("li")).forEach(element => {
+        if (!element.innerText.includes(filter.value)){
+            element.style.display = "none";
+        }
+    }); 
 }
