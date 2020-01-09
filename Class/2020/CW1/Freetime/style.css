@@ -1,0 +1,22 @@
+table {
+    border-spacing: 6px;
+    color: dimgray;
+    border: 2px solid dimgray;
+    box-shadow: 1px 1px 4px black;
+}
+
+table tr:nth-child(odd){
+    background-color: lightgray;
+}
+
+th{
+    background-color: black;
+    color: white;
+    padding: 8px;
+}
+
+td{
+    color: black;
+    padding: 4px;
+}
+
