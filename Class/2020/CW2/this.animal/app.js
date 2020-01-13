@@ -3,7 +3,9 @@
 let animal1 = {
     name: "horse",
     legs: 4,
-    cntLegs: function(){
+    sound: "yeehaw",
+    tail: true,
+    cntLegs: function() {
         document.write(`The ${this.name} has ${this.legs} legs.<br>`)
         return `The ${this.name} has ${this.legs} legs.<br>`
     }
@@ -12,10 +14,12 @@ let animal1 = {
 let animal2 = {
     name: "centipede",
     legs: 100,
-    cntLegs: function (){
+    sound: "ssss",
+    tail: false,
+    cntLegs: function () {
         document.write(`The ${this.name} on the other hand has ${this.legs} legs.<br>`)
     }
 }
 
 animal1.cntLegs();
-animal2.cntLegs();
+animal2["cntLegs"]();
