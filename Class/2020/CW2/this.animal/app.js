@@ -23,3 +23,5 @@ let animal2 = {
 
 animal1.cntLegs();
 animal2["cntLegs"]();
+
+if ( )
