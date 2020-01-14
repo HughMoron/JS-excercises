@@ -11,15 +11,16 @@ keys.addEventListener('click', e => {
     const displayedNum = display.textContent
     // prev... is undefined until an operator Button is clicked, then it changes to "operator":
     const previousKeyType = calculator.dataset.previousKeyType
-    console.log(action)
+    console.log(previousKeyType)
 
+     // Remove .is-depressed class from all keys
+     Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'))
     // IF SOMETHING IS PRESSED OTHER THAN ACTION-DATA --> So a digit
     if (!action) {
-      // If the display is 0 then change the display, otherwise add digit to existing
+      // If the display is 0 or the target was an operator, change the display, otherwise add digit to existing
       if (displayedNum === '0'|| previousKeyType === 'operator') {
-        display.textContent = keyContent
-        // Remove .is-depressed class from all keys
-        Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'))
+        display.textContent = keyContent;
+        calculator.dataset.previousKeyType = "";
       }
      else {
       display.textContent = displayedNum + keyContent
@@ -46,6 +47,9 @@ keys.addEventListener('click', e => {
       //Saving the operator before it gets cleared
       calculator.dataset.operator = action
     }
+    if (action === 'clear') {
+      display.textContent = 0
+    }
     if (action === 'calculate') {
       const firstValue = calculator.dataset.firstValue
       const operator = calculator.dataset.operator
@@ -58,17 +62,17 @@ keys.addEventListener('click', e => {
 
     
 
-const calculate = (n1, operator, n2) => {
+const calculate = (operand1, operator, operand2) => {
   let result = ''
   
   if (operator === 'add') {
-    result = parseFloat(n1) + parseFloat(n2)
+    result = parseFloat(operand1) + parseFloat(operand2)
   } else if (operator === 'subtract') {
-    result = parseFloat(n1) - parseFloat(n2)
+    result = parseFloat(operand1) - parseFloat(operand2)
   } else if (operator === 'multiply') {
-    result = parseFloat(n1) * parseFloat(n2)
+    result = parseFloat(operand1) * parseFloat(operand2)
   } else if (operator === 'divide') {
-    result = parseFloat(n1) / parseFloat(n2)
+    result = parseFloat(operand1) / parseFloat(operand2)
   }
   
   return result
