@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: black; */
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    border-bottom: 4px solid #007bff;
+    opacity: 90%;
+    justify-content: right;
+}
+
+#home {
+    background-image: url(IMG/group-of-people-near-wall-2422290.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+#home img {
+    z-index: -999;
+}
+
+#checkIcon {
+    color: #007bff;
+    background-color: white;
+}
