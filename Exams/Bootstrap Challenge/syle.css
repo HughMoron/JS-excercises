@@ -26,4 +26,11 @@ nav {
 #checkIcon {
     color: #007bff;
     background-color: white;
+    border-radius: 3px;;
+}
+
+#checkIconDark {
+    color: #fff;
+    background-color: #343a40;
+    border-radius: 3px;
 }
