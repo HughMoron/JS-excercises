@@ -1,7 +1,7 @@
-const calculator = document.querySelector(".calculator");
-const keys = calculator.querySelector(".calculator__keys");
+const calculator = document.querySelector(".calculator"); console.log(calculator)
+const keys = calculator.querySelector(".calculator__keys");console.log(keys)
 const display = document.querySelector('.calculator__display')
-
+console.log(display)
 
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
@@ -27,7 +27,7 @@ keys.addEventListener('click', e => {
     }
   }
     // Decimal Rules
-    if (action === 'decimal') {
+    if (action === 'decimal'&& !display.textContent.includes(".")) {
       display.textContent = displayedNum + '.'
     }
 
