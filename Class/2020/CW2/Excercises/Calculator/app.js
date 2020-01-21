@@ -1,7 +1,6 @@
 const calculator = document.querySelector(".calculator"); console.log(calculator)
 const keys = calculator.querySelector(".calculator__keys");console.log(keys)
-const display = document.querySelector('.calculator__display')
-console.log(display)
+const display = document.querySelector('.calculator__display');console.log(display)
 
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
@@ -9,9 +8,10 @@ keys.addEventListener('click', e => {
     const action = key.dataset.action
     const keyContent = key.textContent
     const displayedNum = display.textContent
-    // prev... is undefined until an operator Button is clicked, then it changes to "operator":
+    // prev... is undefined until an operator Button is clicked, then it changes to "operator": Line 45("operator") and 24("").
     const previousKeyType = calculator.dataset.previousKeyType
     console.log(previousKeyType)
+    console.log(action)
 
      // Remove .is-depressed class from all keys
      Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'))
@@ -79,8 +79,15 @@ const calculate = (operand1, operator, operand2) => {
 }
 
 
-
-
+const calculate = (operand1,operator,operand2) =>{
+  (operator === "add")?result= parseFloat(operand1)+parseFloat(operand2)
+    :((operator === "substract")?result= parseFloat(operand1)-parseFloat(operand2)
+    : ((operator === "multiply")?result= parseFloat(operand1)*parseFloat(operand2)
+    :((operator === "divide")?result= parseFloat(operand1)/parseFloat(operand2)
+  )
+  )
+  )
+  }
 
 
 
