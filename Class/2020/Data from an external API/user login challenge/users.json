@@ -1,0 +1,29 @@
+{ "users" : [{
+        "nameFirst": "Ali",
+        "nameLast": "Alhayek",
+        "numPhone": "0150123456",
+        "username": "Ali1",
+        "password": "123Ali321"
+    },
+    {
+        "nameFirst": "Bli",
+        "nameLast": "Blhayek",
+        "numPhone": "0151123456",
+        "username": "Bli1",
+        "password": "123Bli321"
+    },
+    {
+        "nameFirst": "Cli",
+        "nameLast": "Clhayek",
+        "numPhone": "0152123456",
+        "username": "Cli1",
+        "password": "123Cli321"
+    },
+    {
+        "nameFirst": "Dli",
+        "nameLast": "Dlhayek",
+        "numPhone": "0153123456",
+        "username": "Dli1",
+        "password": "123Dli321"
+    }
+]}
