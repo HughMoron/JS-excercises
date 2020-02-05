@@ -29,15 +29,15 @@ margin: auto;
     }
 
     #game .hero{
-        height: 5rem;
+        height: 4rem;
         position: absolute;
-        top: 80vh;
-        left: 65vh;
+        top: 83vh;
+        left: 45vh;
         
     }
 
     #game .invader{
-        height: 3.5rem;
+        height: 2.7rem;
     }
 
 .audioplayer{
