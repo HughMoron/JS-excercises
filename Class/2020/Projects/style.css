@@ -13,57 +13,49 @@
 }
 
 .container {
-    background-color: black;
-    padding: 0 1rem 0 1rem;
+    background-image: url(IMG/cluster-of-stars-1341279.jpg);
+    background-size: contain;
+    padding: 0 1rem;
     margin: auto;
+    height: 100vh;
 }
 
 .headline {
-    color: white;
+    color: yellow;
     padding: 0.5rem;
+    font-size: 3rem;
     text-align: center;
-    text-shadow: 3px 3px 1px rgba(93, 92, 92, 0);
+    text-shadow: 4px 4px 1px black;
+    padding-top: 2rem;
+    animation: 1s linear popUp;
 }
 
 #game {
-    background-image: url(IMG/cluster-of-stars-1341279.jpg);
-    background-size: contain;
     margin: auto;
     width: 80vw;
-    height: 80vh;
-    /* overflow: hidden; */
+    height: 76vh;
+    /* box-shadow: inset 0 0 20px rgba(114, 114, 114, 0.4); */
 }
 
 #hero {
     background: url(IMG/Invaders/Saf1.png);
-    height: 7vh;
+    height: 10vh;
     position: absolute;
-    top: 77vh;
+    top: 75vh;
     left: 47vw;
 }
 
+
 .invader {
     height: 8vh;
-    position: relative;
-    top: 10vh;
-    left: 12vw;
-}
-
-.audioplayer {
-    width: 90vw;
-    display: flex;
-    margin: auto;
-}
-
-.audioplayer .player {
-    margin: auto;
+    position: absolute;
 }
 
 #missiles {
     width: 80vw;
-    height: 80vh;
+    height: 76vh;
     position: absolute;
-   
+
 }
 
 .missile {
@@ -73,3 +65,105 @@
     transform: rotate(-90deg);
     position: absolute;
 }
+
+.hit {
+    visibility: hidden;
+}
+
+@keyframes popUp {
+    0%{
+        transform: scaleX(0);
+        /* transform: scaleY(0); */
+    }
+    100%{
+        transform: scaleX(1);
+        /* transform: scaleY(1); */
+    }
+}
+
+
+
+
+
+
+/* PARALLAX
+.fixed {
+    position: fixed;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    width: 20vw;
+    top: 50%;
+    font-size: 24px;
+  }
+  .parallax {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+  }
+  
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-2px) scale(3);
+    transform: translateZ(-2px) scale(3);
+  }
+  .parallax__layer--back2 {
+    -webkit-transform: translateZ(-6px) scale(5);
+    transform: translateZ(-6px) scale(5);
+  }
+  .parallax__layer--back3 {
+    -webkit-transform: translateZ(-12px) scale(6);
+    transform: translateZ(-12px) scale(6);
+  }
+  
+  /* add some padding to force scrollbars */
+/* .parallax__layer {
+    padding: 100vh 0;
+  }
+  
+  .starfield > * {
+    background-size: 200px 200px;
+    background-image: radial-gradient(
+        2px 2px at 40px 60px,
+        #ccc,
+        rgba(0, 0, 0, 0)
+      ),
+      radial-gradient(2px 2px at 20px 50px, #ddd, rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 30px 100px, #eee, rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 40px 60px, rgb(0, 255, 0), rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 110px 90px, rgb(255, 0, 0), rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 190px 150px, rgb(255, 200, 0), rgba(0, 0, 0, 0));
+    background-repeat: repeat;
+  }
+  .starfield > * {
+    position: absolute;
+    top: -250%;
+    left: 0;
+    height: 500%;
+    width: 100%;
+  }
+  
+  .starfield span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  .starfield span:nth-child(3) {
+    transform: rotate(69deg);
+  }
+  .starfield span:nth-child(4) {
+    transform: rotate(123deg);
+  }
+   */
