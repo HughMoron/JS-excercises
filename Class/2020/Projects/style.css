@@ -43,8 +43,8 @@
 }
 
 .invader {
-    height: 5vh;
-    position: absolute;
+    height: 8vh;
+    position: relative;
     top: 10vh;
     left: 12vw;
 }
