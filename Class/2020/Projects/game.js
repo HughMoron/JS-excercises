@@ -155,7 +155,9 @@ function moveInvaders() {
     //     console.log(invaders)
     // }
     Array.from(document.querySelectorAll(".invader")).forEach(item=>{
-        item.style.top += 0.05+"vh"
+    //     let x = item.offsetHeight.replace( /^\D+/g, '');
+    //    x +=10
+        item.offsetHeight += 0.05
     })
 }
 
@@ -200,9 +202,9 @@ function hitDetectionInvader() {
 // GAME LOOP
 drawInvaders();
 function gameLoop() {
-    setTimeout(gameLoop, 150)
-    moveMissiles();
-    drawMissiles();
-    moveInvaders();  
+    // setTimeout(gameLoop, 150)
+    // moveMissiles();
+    // drawMissiles();
+    // moveInvaders();  
 }
 gameLoop()
