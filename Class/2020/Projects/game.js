@@ -181,7 +181,7 @@ function gameLoop() {
     setTimeout(gameLoop, 150)
     moveMissiles();
     drawMissiles();
-    // drawInvaders();  
+    drawInvaders();  
     moveInvaders();
     hitDetectionInvader();
 }

@@ -23,33 +23,49 @@
 
         <!-- HEADLINE -->
         <h1 class="headline">DCI Invaders</h1>
-        <!-- <div class="audioplayer">
-            <audio onload="autoplay()" class="player" controls src="Music/Lobo_Loco_-_10_-_Old_Ralley_ID_1200.mp3"></audio>
-        </div> -->
-        <div class="containerEnter">
-        <a class="enter">Shall we play?</a>
-        </div>
-        <!-- GAME -->
-        <div id="game">
-            <!-- HERO -->
-            <div><img src="IMG/Invaders/Saf1.png" id="hero" alt=""></div>
-            <!-- MISSILE -->
-            <div id="missiles"></div>
-            <!-- INVADERS -->
-            <div id="invaders">
 
+        <!-- GAME START -->
+        <div class="containerEnter">
+            <a class="enter">Shall we play?</a>
+
+            <!-- PICK A PLAYER -->
+            <div id="playerPick">
+                <a onclick="letsGo(this)" class="pick" id="p1" href=""><img class="player" src="IMG/Invaders/Saf1.png"
+                        alt="">
+                    <p>Saf-1</p>
+                </a>
+
+                <a onclick="letsGo(this)" class="pick" id="p2" href=""><img class="player" src="IMG/Invaders/dci.png"
+                        alt="">
+                    <p> DCI</p>
+                </a>
+
+                <a onclick="letsGo(this)" class="pick" id="p3" href=""><img class="player" src="IMG/Invaders/Ahmad.png"
+                        alt="">
+                    <p> A-Matt</p>
+                </a>
             </div>
 
 
-            <!-- DUMMY -->
-            <!-- <img src="IMG/Invaders/Olli.png" alt="" class="invader"> -->
+            <!-- GAME -->
+            <div id="game">
+                <!-- HERO -->
+                <div id="picked"><img src="IMG/Invaders/Saf1.png" id="hero" alt=""></div>
+                <!-- MISSILE -->
+                <div id="missiles"></div>
+                <!-- INVADERS -->
+                <div id="invaders">
+    
+                </div>
+            </div>
         </div>
 
 
     </div>
-    <script src="musicplayer.js"></script>
 
-    <script src="game.js.js"></script>
+    <script src="musicplayer.js"></script>
+    <script src="pickup.js"></script>
+    <script src="game.js"></script>
 </body>
 
 </html>

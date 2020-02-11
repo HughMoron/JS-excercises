@@ -1,8 +1,8 @@
 let audioplayer = document.querySelector(".audioplayer")
 
-console.log(audioplayer)
+// console.log(audioplayer)
 audioplayer.addEventListener("click",(e)=>{
-    console.log(e.target)
+    // console.log(e.target)
     let song = document.getElementById("song")
     if(e.target.id=="play"){
         e.target.classList = "playerButton fas fa-pause";
