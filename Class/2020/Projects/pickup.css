@@ -82,21 +82,11 @@
         font-size: 10rem;
     }
 
-    15% {
-        transform: scale(1);
-        font-size: 10rem;
-    }
-
-
-    25% {
-        transform: scale(0.85);
-        font-size: 10rem;
-    }
-
     35% {
         transform: scale(1);
         font-size: 10rem;
     }
+
 
     45% {
         transform: scale(0.85);
@@ -104,6 +94,16 @@
     }
 
     55% {
+        transform: scale(1);
+        font-size: 10rem;
+    }
+
+    65% {
+        transform: scale(0.85);
+        font-size: 10rem;
+    }
+
+    75% {
         transform: scale(1);
         font-size: 10rem;
     }
