@@ -20,7 +20,7 @@ function letsGo(e) {
         song.autoplay = true;
         song.load();
     audioplayer.parentElement.classList = "playerAnim"
-    console.log(audioplayer.parentElement)
+    // console.log(audioplayer.parentElement)
 
     //LET'S GO!!        
     let go =document.createElement("p")

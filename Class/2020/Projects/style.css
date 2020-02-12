@@ -44,13 +44,14 @@
     background: url(IMG/Invaders/Saf1.png);
     height: 10vh;
     position: absolute;
-    top: 75vh;
+    top: 70vh;
     left: 47vw;
 }
 
 
 .invader {
     height: 8vh;
+    width: 5vw;
     position: absolute;
 }
 

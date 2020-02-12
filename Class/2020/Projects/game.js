@@ -1,90 +1,90 @@
 let hero = {
-    top: 77,
+    top: 70,
     left: 47
 };
 
-let score = 0;
+var score = 0;
 
 let missiles = [];
 
 let invaders = [{
-        top: 10,
+        top: 1,
         left: 33
     },
     {
-        top: 10,
+        top: 1,
         left: 40
     },
     {
-        top: 10,
+        top: 1,
         left: 47
     },
     {
-        top: 10,
+        top: 1,
         left: 54
     },
     {
-        top: 10,
+        top: 1,
         left: 61
     },
     {
-        top: 17,
+        top: 8,
         left: 33
     },
     {
-        top: 17,
+        top: 8,
         left: 40
     },
     {
-        top: 17,
+        top: 8,
         left: 47
     },
     {
-        top: 17,
+        top: 8,
         left: 54
     },
     {
-        top: 17,
+        top: 8,
         left: 61
     },
     {
-        top: 24,
+        top: 15,
         left: 33
     },
     {
-        top: 24,
+        top: 15,
         left: 40
     },
     {
-        top: 24,
+        top: 15,
         left: 47
     },
     {
-        top: 24,
+        top: 15,
         left: 54
     },
     {
-        top: 24,
+        top: 15,
         left: 61
     },
     {
-        top: 31,
+        top: 22,
         left: 33
     },
     {
-        top: 31,
+        top: 22,
         left: 40
     },
     {
-        top: 31,
+        top: 22,
         left: 47
     },
     {
-        top: 31,
+        top: 22,
         left: 54
     },
     {
-        top: 31,
+        top: 22,
         left: 61
     },
 ]
@@ -122,7 +122,7 @@ function drawMissiles() {
     for (let missile = 0; missile < missiles.length; missile++) {
         document.getElementById("missiles").innerHTML += `<div><p class='missile' style='left:${missiles[missile].left}vw ; top:${missiles[missile].top}vh;'>code</p></div>`;
     }
-    hitDetectionInvader();
+    // hitDetectionInvader();
 }
 //  MOVE MISSILES
 function moveMissiles() {
@@ -143,68 +143,56 @@ function drawInvaders() {
         invaderElement.id = `${invader}`
 
         document.getElementById("invaders").appendChild(invaderElement);
-        // document.getElementById("invaders").innerHTML += `<img src="IMG/Invaders/i${invader}.png" class='invader' style='left:${invaders[invader].left}vw ; top:${invaders[invader].top}vh;'>`;
     }
 }
 
 
 //  MOVE INVADERS
 function moveInvaders() {
-    // for (let invader = 0; document.querySelectorAll(".invader") < invaders.length; invader++) {
-    //     invaders[invader].top += 0.05;
-    //     console.log(invaders)
-    // }
-    Array.from(document.querySelectorAll(".invader")).forEach(item=>{
-    //     let x = item.offsetHeight.replace( /^\D+/g, '');
-    //    x +=10
-        item.offsetHeight += 0.05
-    })
+    for (let invader = 0; invader < invaders.length; invader++) {
+        invaders[invader].top += 0.05;
+        // console.log(invaders)
+    }
 }
 
-//  HIT @ INVADER
 function hitDetectionInvader() {
-    console.log(invaders)
     missiles.forEach((missile) => {
-        invaders.forEach((invader) => {
-            if (missile.left >= invader.left || missile.left <= invader.left + invader.offsetWidth && missile.top <= invader.top + invader.offsetHeight) {
-              console.log("Done")
+        //console.log(ins)
+        for (let invader = 0; invader < invaders.length; invader++) {
+            if (missile.left >= invaders[invader].left && missile.left <= (invaders[invader].left + 7) && missile.top <= (invaders[invader].top + 22)) {
+
+                missiles.splice(missile, 1);
+                let hit = invaders.splice(invader, 1);
+                //    console.log(hit[0].top)
+                console.log(invaders[invader])
+                let invaderElement = Array.from(document.querySelectorAll(".invader"))
+
+
+                let el = invaderElement[invader]
+                el.remove()
+                score += 10;
+                console.log(score)
+                setTimeout(youWon, 1000)
             }
-
-
-            console.log(invader.offsetWidth)
-        })
+        }
     })
-
-
-
-
-
-    // for (let invader = 0; invader < invaders.length; invader++) {
-    //     for (let missile = 0; missile < missiles.length; missile++) {  
-    //         if(missiles[missile].top === invaders[invader].top){ 
-    //             if(missiles[missile].left>=invaders[invader].left||missiles[missile].left<=invaders[invader].left+1){
-    //             console.log(invaders[invader])
-    //             console.log(missiles[missile])
-    // invaders.splice(invader,1);
-    // document.getElementById(`${invader}`).remove()
-    // document.getElementById("invader").classList.add("hit")
-
-    //             missiles.splice(missile,1);
-    //             score += 10
-    //             console.log(score)
-    //         }  
-    //     }
-    //     }
-    // }
 }
 
 
 // GAME LOOP
-drawInvaders();
 function gameLoop() {
-    // setTimeout(gameLoop, 150)
-    // moveMissiles();
-    // drawMissiles();
-    // moveInvaders();  
+    drawInvaders();
+    setTimeout(gameLoop, 150)
+    moveInvaders();
+    moveMissiles();
+    drawMissiles();
+    hitDetectionInvader()
 }
 gameLoop()
+
+function youWon() {
+    if (score == 20) {
+        document.getElementById("youWon").style.display ="block"
+        prompt(score)
+    }
+}
