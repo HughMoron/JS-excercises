@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="musicplayer.css">
     <link rel="stylesheet" href="pickup.css">
+    <link rel="stylesheet" href="youWon.css">
 
 </head>
 
@@ -17,8 +18,12 @@
     <div class="container">
         <!-- AUDIOPLAYER -->
         <div class="audioplayer">
-            <a href="#"><i id="play" class="playerButton fas fa-play"></i></a>
+            <a href="#">
+                <i id="play" class="playerButton fas fa-play"></i>
+            </a>
+            
             <audio id="song" src="Music/Lobo_Loco_-_10_-_Old_Ralley_ID_1200.mp3"></audio>
+            <audio id="song2" src="Music/Strassmeir_Dachaur_Bauernkapelle_-_Werdenfelser_Trompeten_Landler.mp3"></audio>
         </div>
 
         <!-- HEADLINE -->
@@ -62,8 +67,13 @@
             </div>
             <!-- MODAL -->
                 <div id="youWon">
+                    <h3>Congratulations!!</h3>
+                    <p>You provided all the DCI Invaders with Code and made them disappear to the Job Market!
+                    </p>
+                    <p>Become a Legend and click here:</p>
+                    <a class="highscore" href="">Highscore</a>
                     <form action="" class="userData">
-                        
+
                     </form>
                 </div>
         </div>
@@ -73,6 +83,7 @@
 
     <script src="musicplayer.js"></script>
     <script src="pickup.js"></script>
+    <script src="youWon.js"></script>
     <script src="game.js"></script>
 </body>
 

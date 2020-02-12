@@ -17,8 +17,8 @@ function letsGo(e) {
     let audioplayer = document.getElementById("play")
     audioplayer.classList = "playerButton fas fa-pause";
         audioplayer.id = "stop";
-        song.autoplay = true;
-        song.load();
+        song.play() ;
+        // song.load();
     audioplayer.parentElement.classList = "playerAnim"
     // console.log(audioplayer.parentElement)
 
