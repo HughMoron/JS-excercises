@@ -21,7 +21,7 @@
             <a href="#">
                 <i id="play" class="playerButton fas fa-play"></i>
             </a>
-            
+
             <audio id="song" src="Music/Lobo_Loco_-_10_-_Old_Ralley_ID_1200.mp3"></audio>
             <audio id="song2" src="Music/Strassmeir_Dachaur_Bauernkapelle_-_Werdenfelser_Trompeten_Landler.mp3"></audio>
         </div>
@@ -31,27 +31,31 @@
 
         <!-- GAME START -->
         <div class="containerEnter">
-            <a class="enter">Shall we play?</a>
+            <a class="enter">
+                <h3> We need your help!</h3>
+                <p> A group invaded the DCI, looking for Jobs! Can you supply them with code so they leave to find some
+                    Jobs?!</p>
+            </a>
 
             <!-- PICK A PLAYER -->
             <div id="playerPick">
-               <p id="charPick">Pick a Character:</p>
-               <div class="charPickDiv">
-                <a onclick="letsGo(this)" class="pick" id="p1" href=""><img class="player" src="IMG/Invaders/Saf1.png"
-                        alt="">
-                    <p>Saf-1</p>
-                </a>
+                <p id="charPick">Pick a Character:</p>
+                <div class="charPickDiv">
+                    <a onclick="letsGo(this)" class="pick" id="p1" href=""><img class="player"
+                            src="IMG/Invaders/Saf1.png" alt="">
+                        <p>Saf-1</p>
+                    </a>
 
-                <a onclick="letsGo(this)" class="pick" id="p2" href=""><img class="player" src="IMG/Invaders/dci.png"
-                        alt="">
-                    <p> DCI</p>
-                </a>
+                    <a onclick="letsGo(this)" class="pick" id="p2" href=""><img class="player"
+                            src="IMG/Invaders/dci.png" alt="">
+                        <p> DCI</p>
+                    </a>
 
-                <a onclick="letsGo(this)" class="pick" id="p3" href=""><img class="player" src="IMG/Invaders/Ahmad.png"
-                        alt="">
-                    <p> A-Matt</p>
-                </a>
-            </div>
+                    <a onclick="letsGo(this)" class="pick" id="p3" href=""><img class="player"
+                            src="IMG/Invaders/Ahmad.png" alt="">
+                        <p> A-Matt</p>
+                    </a>
+                </div>
             </div>
 
 
@@ -65,17 +69,26 @@
                 <div id="invaders">
                 </div>
             </div>
-            <!-- MODAL -->
-                <div id="youWon">
-                    <h3>Congratulations!!</h3>
-                    <p>You provided all the DCI Invaders with Code and made them disappear to the Job Market!
-                    </p>
-                    <p>Become a Legend and click here:</p>
-                    <a class="highscore" href="">Highscore</a>
-                    <form action="" class="userData">
 
-                    </form>
-                </div>
+            <!-- MODAL -->
+            <div id="youWon">
+                <h3>Congratulations!!</h3>
+                <p>You provided all the DCI Invaders with Code and made them disappear to the Job Market!
+                </p>
+                <p>Become a Legend and click here:</p>
+                <a class="highscore" href="">Highscore</a>
+
+
+            </div>
+            <div id="legend">
+                <form action="" class="userData">
+               
+                
+                    <label for="legendName">Name: </label>
+                    <input type="text" name="DCI Protector" id="legendName">
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+            </div>
         </div>
 
 

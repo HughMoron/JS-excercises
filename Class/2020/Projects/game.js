@@ -178,18 +178,7 @@ function hitDetectionInvader() {
     })
 }
 
-function youWon(event) {
-    if (score == 20) {
-        document.getElementById("game").remove();
-        document.getElementById("go").remove();
-        document.getElementById("youWon").style.display ="flex"
 
-// MUSICPLAYER
-
-song.pause()
-    song2.play();
-    }
-}
 
 // GAME LOOP
 function gameLoop() {

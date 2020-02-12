@@ -70,10 +70,6 @@
     position: absolute;
 }
 
-.hit {
-    visibility: hidden;
-}
-
 @keyframes popUp {
     0%{
         transform: scaleX(0);

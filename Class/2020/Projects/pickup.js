@@ -2,7 +2,7 @@
 document.querySelector(".enter").addEventListener("click", whoWillYouChoose)
 
 function whoWillYouChoose(e) {
-    e.target.remove();
+    document.querySelector(".enter").remove();
 
     document.querySelector("#playerPick").style.display = "block";
     e.preventDefault()
