@@ -9,14 +9,14 @@
     border: 5px solid tomato;
     border-radius: 8px;
     color: tomato;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 2rem;
     animation: 1s modal;
 }
 
 #youWon h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 2rem;
     padding-bottom: 1rem;
 }
@@ -48,17 +48,17 @@
     color: tomato;
     font-size: 2rem;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
 #score {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 #legendName {
     margin: 2rem auto;
     width: 20vw;
-    padding: 1rem;
+    padding: 0.5rem;
     color: black;
     text-shadow: 4px 4px 1px yellow;
     font-size: 2rem;
@@ -68,12 +68,12 @@
     text-decoration: none;
     color: white;
     display: block;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 1rem;
     background-color: tomato;
     border-radius: 5px;
     box-shadow: 2px 2px 3px grey;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #highscores{
