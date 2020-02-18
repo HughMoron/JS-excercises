@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery | Excercise JS Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: darkorange;
+}
+.container{
+    width: 60%;
+    margin: auto;
+    background: darkcyan;
+}
+header{
+    text-align: center;
+}
+
+header h1{
+    padding-top: 2rem;
+}
+
+header p {
+    color: black;
+}
+
+hr{
+    border-top: 3px dashed;
+   width: 90%; 
+}
+
+#results{
+    display: none;
+    background-color: darkorange;
+    padding: 1rem;
+    width: 80%;
+    margin: auto;
+}
+
+.questions {
+padding: 1rem 2rem;
+display: block;
+}
+
+input{
+    display: block;
+}
+
+#submit{
+    background-color: darkorange;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+}
+
+#results span{
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <header>
+<h1>Simple JavaScript Quiz</h1>
+<p>Test your knowledge in JavaScript fundamentals</p>
+</header>
+<hr>
+<div id="results"></div>
+
+<div class="questions">
+<h3 id="q1">1.In which HTML element do we put in JavaScript code?</h3>
+<form action="">
+<input type="radio" name="js" id="js">
+<label for="js">a.&lt;js&gt;</label>
+<input type="radio" name="script" id="script">
+<label for="script">b.&lt;script&gt;</label>
+<input type="radio" name="body" id="body">
+<label for="body">c.&lt;body&gt;</label>
+<input type="radio" name="link" id="link">
+<label for="link">d.&lt;link&gt;</label>
+</form>
+
+<h3 id="q2">2. Which HTML attribute is used to reference an external javascript file?</h3>
+<form action="">
+<input type="radio" name="js" id="js">
+<label for="js">a.&lt;js&gt;</label>
+<input type="radio" name="script" id="script">
+<label for="script">b.&lt;script&gt;</label>
+<input type="radio" name="body" id="body">
+<label for="body">c.&lt;body&gt;</label>
+<input type="radio" name="link" id="link">
+<label for="link">d.&lt;link&gt;</label>
+</form>
+
+<h3 id="q3">3.How would you write "Hello" in an alert box?</h3>
+<form action="">
+<input type="radio" name="js" id="js">
+<label for="js">a.&lt;js&gt;</label>
+<input type="radio" name="script" id="script">
+<label for="script">b.&lt;script&gt;</label>
+<input type="radio" name="body" id="body">
+<label for="body">c.&lt;body&gt;</label>
+<input type="radio" name="link" id="link">
+<label for="link">d.&lt;link&gt;</label>
+</form>
+
+
+<h3 id="q4">4. Javascript is directly related to the "java"?</h3>
+<form action="">
+<input type="radio" name="js" id="js">
+<label for="js">a.&lt;js&gt;</label>
+<input type="radio" name="script" id="script">
+<label for="script">b.&lt;script&gt;</label>
+<input type="radio" name="body" id="body">
+<label for="body">c.&lt;body&gt;</label>
+<input type="radio" name="link" id="link">
+<label for="link">d.&lt;link&gt;</label>
+</form>
+
+<h3 id="q5">5.A variable in JavaScript must start with which special character?</h3>
+<form action="">
+<input type="radio" name="js" id="js">
+<label for="js">a.&lt;js&gt;</label>
+<input type="radio" name="script" id="script">
+<label for="script">b.&lt;script&gt;</label>
+<input type="radio" name="body" id="body">
+<label for="body">c.&lt;body&gt;</label>
+<input type="radio" name="link" id="link">
+<label for="link">d.&lt;link&gt;</label>
+</form>
+
+<a id="submit" href="#">Submit Answers</a>
+<footer>Copyright © 2020, All rights reserved</footer> 
+</div>
+
+</div>
+<script>
+$("#submit").click(()=>{
+    $("#results").css("display","block")
+    $("#results").html(`You scored <span>5</span> out of <span>5</span>`)
+})
+
+
+</script>
+</body>
+</html>
