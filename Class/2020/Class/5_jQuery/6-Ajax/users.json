@@ -1,0 +1,25 @@
+[
+    {
+        "firstName": "Saf1",
+        "lastName": "Aherallah",
+        "email": "safwan.Aherallah@gmail.com"
+    },
+    {
+        "firstName": "Saf2",
+        "lastName": "Bherallah",
+        "email": "saf2.Bherallah@gmail.com"
+    },
+    {
+        "firstName": "Saf3",
+        "lastName": "Cherallah",
+        "email": "saf3.Cherallah@gmail.com"
+    },{
+        "firstName": "Saf4",
+        "lastName": "Dherallah",
+        "email": "saf4.Dherallah@gmail.com"
+    },{
+        "firstName": "Saf5",
+        "lastName": "Eherallah",
+        "email": "saf5.Eherallah@gmail.com"
+    }
+]
