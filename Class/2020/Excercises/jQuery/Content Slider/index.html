@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <title>Content Slider</title>
+</head>
+
+<body>
+    <header>
+        <h1>jQuery Content Slider</h1>
+    </header>
+    <div class="container">
+
+        <div class="slideshow">
+
+            <div class="slide active">
+
+                <span>Caption #1</span>
+            </div>
+
+            <div class="slide slide1">
+                <span>Caption #2</span>
+            </div>
+
+            <div class="slide slide2">
+
+                <span>Caption #3</span>
+            </div>
+
+            <div class="slide slide3">
+
+                <span>Caption #4</span>
+            </div>
+
+            <div class="slide slide4">
+                <span>Caption #5</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <a class="btn next">Next</a>
+            <a class="btn prev">Previous</a>
+        </div>
+    </div>
+    <script>
+        $(".slide").css("background-color", getRandomColor());
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
