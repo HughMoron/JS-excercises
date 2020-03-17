@@ -20,7 +20,7 @@ class Father extends Component {
       titleF: e.target.value
     });
   };
-  titleF: e.target.value
+   
   render() {
     return (
       <Fragment className='App'>
