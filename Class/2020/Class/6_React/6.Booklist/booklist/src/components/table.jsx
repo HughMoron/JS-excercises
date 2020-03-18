@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export const Table = () => {
-    return (
-        <table class="u-full-width">
+export class table extends Component {
+    render() {
+        return (
+            <table class="u-full-width">
             <thead>
                 <tr>
                   <th>Title</th>
@@ -13,7 +14,8 @@ export const Table = () => {
               </thead>
               <tbody id="book-list"></tbody>
         </table>
-    )
+        )
+    }
 }
 
-export default Table;
+export default table

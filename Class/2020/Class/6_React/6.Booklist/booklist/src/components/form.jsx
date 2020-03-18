@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export const Form = () => {
-    return (
-        <form id="book-form">
+export class form extends Component {
+    render() {
+        return (
+            <form id="book-form">
             <div>
                 <label for="title">Title</label>
                 <input type="text" id="title" class="u-full-width"/>
@@ -20,7 +21,8 @@ export const Form = () => {
             </div>
 
         </form>
-    )
-};
+        )
+    }
+}
 
-export default Form;
+export default form
