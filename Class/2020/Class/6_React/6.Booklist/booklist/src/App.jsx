@@ -1,15 +1,34 @@
-import React from 'react';
-import Form from "../src/components/form.jsx"
-import Table from "../src/components/table.jsx"
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import React, { Fragment } from 'react';
+import Form from "../src/components/form.jsx";
+import Table from "../src/components/table.jsx";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App container">
+const App = () => {
+  return(
+  <Router>
+    <Fragment className="App container">
     <h1>Add Book</h1>
+    <Link to='/'>Add Book</Link> 
+    <Link to={{ pathname: '/about' }}>Booklist</Link>
+  <Switch>
+  
+  <Route 
+    path='/'
+    render={props => (
     <Form />
+    )}
+    />
+  <Route 
+    path='/'
+    render={props => (
     <Table />
-    </div>
+    )}
+    />
+  
+  </Switch>
+  </Fragment>
+  </Router>
   );
 }
 
