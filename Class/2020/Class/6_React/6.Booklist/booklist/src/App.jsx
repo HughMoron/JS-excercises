@@ -20,7 +20,7 @@ const App = () => {
     )}
     />
   <Route 
-    path='/'
+    path='/about'
     render={props => (
     <Table />
     )}
