@@ -1,0 +1,16 @@
+{
+  "name": "0.firststeps",
+  "version": "1.0.0",
+  "description": "First Try of working with NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "start",
+    "tryout",
+    "nodejs"
+  ],
+  "author": "Stefan M",
+  "license": "ISC"
+}

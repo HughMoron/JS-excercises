@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Header from "./components/Header";
 
-// https://swapi.co/
+
 
 class App extends Component {
- state= {character: {}
+ state= {
+   value: 'Please write an essay about your favorite DOM element.'
 }
+  
+ handleChange(event){
+    props.setState({value: event.target.value});
+  }
 
-componentDidMount(){
-fetch("https://swapi.co/api/people/10")
-}
+  handleSubmit(event) {
+    alert('An essay was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
 
 render(){
-  return (
-    <div className="App">
-      {/* <Header/> */}
-      Code goes here ...
-    </div>
+ 
+  return (  
+    <form onSubmit={this.handleSubmit}>
+        <label>
+          Essay:
+        </label>
+          <textarea value={this.state.value} onChange={props.handleChange} />
+        <input type="submit" value="Submit" />
+      </form>
   );
  }
 }
