@@ -12,5 +12,11 @@
     "nodejs"
   ],
   "author": "Stefan M",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
