@@ -1,0 +1,4 @@
+// import {moduleName} from '.person'
+const participant = require("./person")
+
+console.log(participant) 
