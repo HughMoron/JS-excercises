@@ -1,20 +1,15 @@
 {
-  "name": "0.firststeps",
+  "name": "nodejs_first_code",
   "version": "1.0.0",
-  "description": "First Try of working with NodeJS",
+  "description": "Fisrt Example in our NodeJs topic",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev": "nodemon index"
   },
-  "keywords": [
-    "start",
-    "tryout",
-    "nodejs"
-  ],
-  "author": "Stefan M",
+  "author": "Stefan",
   "license": "ISC",
   "dependencies": {
-    "path": "^0.12.7",
     "uuid": "^7.0.2"
   },
   "devDependencies": {
