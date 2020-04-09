@@ -1,15 +1,23 @@
-const express =  require('express');
+const express = require('express');
 const path = require("path")
-
+const members = require('./Members')
 const app = express()
-
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname,"public")))
+const logger = (req,res,next) => {
+    console.log(`${req.protocol}://${req.get('host')}${res.originalURL}`);
+    next();
+}
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname,"public","index.html"));
-//   });
+// Init Middleware
+app.use(logger);
 
-app.listen(PORT,()=> 
-console.log(`Server started on port ${PORT}.`))
+// Get All Members
+app.get('/api/members', (req, res) => res.json(members));
+
+// Set static Folder
+app.use(express.static(path.join(__dirname, "public")));
+
+
+app.listen(PORT, () =>
+    console.log(`Server started on port ${PORT}.`))
