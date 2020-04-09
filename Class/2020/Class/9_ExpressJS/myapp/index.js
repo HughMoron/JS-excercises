@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 5000;
 // Init Middleware
 // app.use(logger);
 
+// Body Parser Middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 // Set static Folder
 app.use(express.static(path.join(__dirname, "public")));
 
