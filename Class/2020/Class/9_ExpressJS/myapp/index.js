@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require("path");
-const logger = require("./middleware/logger")
-
+const exphbs = require("express-handlebars");
+const logger = require("./middleware/logger");
+const members = require('./Members')
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -9,12 +10,26 @@ const PORT = process.env.PORT || 5000;
 // Init Middleware
 // app.use(logger);
 
+// Handlebars Middlewar
+app.engine('handlebars', exphbs({defaultLayout:'main'}));
+app.set('view engine', 'handlebars');
+ 
+app.get('/', function (req, res) {
+    res.render('home');
+});
+ 
+app.listen(3000);
+
 // Body Parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 // Set static Folder
 app.use(express.static(path.join(__dirname, "public")));
+
+// Homepage Route
+app.get('/',(req,res)=> res.render('index',{title: 'Member App'}));
+
 
 // Members Api Routes
 app.use('/api/members', require('./routes/api/members'))
